@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'nanum';
     font-display: auto;
-    src: local('Pacifico Regular'), local('Pacifico-Regular'), local('나눔명조'), url("res/NMR.ttf");
+    src: local('나눔명조'), url("res/NMR.ttf");
     font-display: swap;
 }
 
@@ -192,3 +192,49 @@ a {
     cursor: pointer;
 }
 
+.dialog {
+    transition: all .2s ease-out;
+    padding: 25px;
+    position: fixed;
+    width: 50vw;
+    display: none;
+    opacity: 0;
+    margin: 50vh 0 0 25vw;
+    transform: translateY(-50%) scale(0.9);
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dialog-open {
+    transition: all .2s ease-out;
+    transform: translateY(-50%) scale(1);
+    opacity: 1 !important;
+    margin: 50vh 0 0 calc(25vw - 15px);
+}
+
+#scrim {
+    transition: all .2s ease-out;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: #00000099;
+    display: none;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+}
+
+.scrim-open {
+    transition: opacity .2s ease-out;
+    opacity: 1 !important;
+}
+
+input {
+    font-size: 15px;
+    border-radius: 100px;
+    border: none;
+    background: #dddddd;
+    padding: 15px;
+    width: 100%;
+}
